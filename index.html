@@ -7,22 +7,44 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="path_to_your_ar_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
   <div class="container">
     <header>
       <div class="logo">LOGO</div>
-      <div class="menu-icon">&#9776;</div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     </header>
+
     <main>
       <h1>Which Environment Do You Operate In?</h1>
       <div class="button-group">
-        <button>Hospital</button>
-        <button>Patient Area</button>
-        <button>Imaging</button>
-        <button>Operating Room</button>
-        <button>Laboratory</button>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('menu')">Menu</button>
+        <button onclick="showSection('career')">Career</button>
       </div>
     </main>
+
+    <div id="about" class="content-section hidden"> 
+      <h2>About Us</h2>
+      <p>Information about the company.</p>
+    </div>
+    
+    <div id="menu" class="content-section hidden">
+      <h2>Menu</h2>
+      <p>Menu details.</p>
+    </div>
+    
+    <div id="career" class="content-section hidden">
+      <h2>Career</h2>
+      <p>Career opportunities.</p>
+    </div>
   </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
