@@ -5,55 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Website</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
   <style>
-    /* Reset and Basic Styling */
-    * {
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-}
-
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px; /* Increased padding to pull logo and menu inward */
-  background-color: #f4f4f4;
-  border-bottom: 2px solid #ccc;
-  position: absolute;
-  top: 0;
-}
-
-.menu {
-  font-size: 18px;
-  cursor: pointer;
-  margin-left: 20px; /* Slightly moves the menu inward */
-}
-
-.logo img {
-  height: 50px; /* Adjust logo size */
-  width: auto;
-  margin-right: 10px; /* Slightly moves the logo inward */
-}
-
-    /* Portfolio Section */
-    .portfolio {
-      transform: translateY(60px); /* Adds spacing between the header and content */
+    header {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+    }
+
+    header .menu {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    header .logo img {
+      height: 40px;
+    }
+
+     .portfolio {
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
@@ -66,14 +47,7 @@ header {
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .portfolio-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    }
-
     .portfolio-image {
       position: relative;
     }
@@ -98,22 +72,6 @@ header {
     button#ar-button:hover {
       background: #0056b3;
     }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      header .logo {
-        margin-bottom: 10px;
-      }
-
-      .portfolio {
-        grid-template-columns: 1fr; /* Single column for mobile */
-      }
-    }
   </style>
 </head>
 <body>
@@ -126,46 +84,25 @@ header {
 </header>
 
 <div class="portfolio">
-  <!-- Portfolio Item 1 -->
   <article class="portfolio-item">
     <div class="portfolio-image">
-      <model-viewer 
-        src="scc.glb" 
-        alt="VR Headset" 
-        auto-rotate 
-        camera-controls 
-        ar 
-        ios-src="assets/69eacc1060b111ed8cefbd5ee26890cbbloodana.usdz">
+      <model-viewer src="scc.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/69eacc1060b111ed8cefbd5ee26890cbbloodana.usdz">
         <button slot="ar-button" id="ar-button">View in 4D</button>
       </model-viewer>
     </div>
   </article>
 
-  <!-- Portfolio Item 2 -->
   <article class="portfolio-item">
     <div class="portfolio-image">
-      <model-viewer 
-        src="sem.glb" 
-        alt="AR SCANNER" 
-        auto-rotate 
-        camera-controls 
-        ar 
-        ios-src="assets/CT_SCANNER_A.usdz">
+      <model-viewer src="sem.glb" alt="AR SCANNER" auto-rotate camera-controls ar ios-src="assets/CT SCANNER_A.usdz">
         <button slot="ar-button" id="ar-button">View in 4D</button>
       </model-viewer>
     </div>
   </article>
 
-  <!-- Portfolio Item 3 -->
   <article class="portfolio-item">
     <div class="portfolio-image">
-      <model-viewer 
-        src="scc.glb" 
-        alt="AR SCANNER" 
-        auto-rotate 
-        camera-controls 
-        ar 
-        ios-src="assets/229a4014603111ed8cefbd5ee26890cbCarm.usdz">
+      <model-viewer src="scc.glb" alt="AR SCANNER" auto-rotate camera-controls ar ios-src="assets/229a4014603111ed8cefbd5ee26890cbCarm.usdz">
         <button slot="ar-button" id="ar-button">View in 4D</button>
       </model-viewer>
     </div>
