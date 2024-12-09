@@ -20,13 +20,15 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      background: #333;
-      color: #fff;
+      background: #fff; /* Header background set to white */
+      color: #333;
+      border-bottom: 1px solid #ddd; /* Optional: Adds a subtle border */
     }
 
     header .menu {
       font-size: 24px;
       cursor: pointer;
+      color: #000; /* Menu button color set to black */
     }
 
     header .logo img {
@@ -34,12 +36,12 @@
     }
 
     .portfolio {
-  transform: translateY(100%);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
+      transform: translateY(100%);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
 
     .portfolio-item {
       background: #f9f9f9;
@@ -49,6 +51,7 @@
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .portfolio-image {
       position: relative;
     }
