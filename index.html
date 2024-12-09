@@ -11,7 +11,7 @@
 <header>
   <div class="menu">☰</div>
   <div class="logo">
-    <img src="logo-dark.png" alt="">
+    <img src="logo-dark.png" alt="Logo">
   </div>
 </header>
 
@@ -20,12 +20,19 @@
     <h1>What Benefit We Offer</h1>
     <h1>Our Clients</h1>
     <div class="buttons">
-      <button>LARGE EQUIPMENT</button>
-      <button>SMALL DEVICES</button>
-      <button>EVERYTHING ELSE</button>
+      <button onclick="navigateTo('large-equipment.html')">LARGE EQUIPMENT</button>
+      <button onclick="navigateTo('small-devices.html')">SMALL DEVICES</button>
+      <button onclick="navigateTo('everything-else.html')">EVERYTHING ELSE</button>
     </div>
   </div>
 </main>
+
+<script>
+  // JavaScript function to navigate to a new page
+  function navigateTo(page) {
+    window.location.href = page;
+  }
+</script>
 
 </body>
 </html>
