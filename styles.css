@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 30px; /* Increased padding to pull logo and menu inward */
   background-color: #f4f4f4;
   border-bottom: 2px solid #ccc;
   position: absolute;
@@ -27,11 +27,13 @@ header {
 .menu {
   font-size: 18px;
   cursor: pointer;
+  margin-left: 10px; /* Slightly moves the menu inward */
 }
 
 .logo img {
-  height: 50px; /* Adjust the height of the logo as needed */
+  height: 50px; /* Adjust logo size */
   width: auto;
+  margin-right: 10px; /* Slightly moves the logo inward */
 }
 
 .center-container {
