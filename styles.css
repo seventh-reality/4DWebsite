@@ -1,13 +1,10 @@
+/* General Styles */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: white;
-}
-
-.container {
-  text-align: center;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
 }
 
 header {
@@ -15,44 +12,68 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu {
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .logo {
-  font-size: 24px;
   font-weight: bold;
-}
-
-.menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-h1 {
-  margin: 20px 0;
-}
-
-.button-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.button-group button {
-  padding: 10px;
   font-size: 18px;
-  border: none;
-  background-color: #333;
+}
+
+.content {
+  text-align: center;
+  margin: 20px;
+}
+
+.content h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
   color: white;
-  cursor: pointer;
+  border: 2px solid #0056b3;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: url('button-bg.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.button-group button:hover {
-  background-color: #555;
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 768px) {
-  .button-group {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .buttons button {
+    width: 100%;
+    max-width: 200px;
   }
 }
