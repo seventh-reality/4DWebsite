@@ -27,7 +27,7 @@ header {
 .menu {
   font-size: 18px;
   cursor: pointer;
-  margin-left: 10px; /* Slightly moves the menu inward */
+  margin-left: 20px; /* Slightly moves the menu inward */
 }
 
 .logo img {
