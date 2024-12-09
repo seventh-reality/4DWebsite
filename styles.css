@@ -4,16 +4,24 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f0f0f0;
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #f4f4f4;
   border-bottom: 2px solid #ccc;
+  position: absolute;
+  top: 0;
 }
 
 .menu {
@@ -21,27 +29,27 @@ header {
   cursor: pointer;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 18px;
+.logo img {
+  height: 50px; /* Adjust the height of the logo as needed */
+  width: auto;
 }
 
-.content {
+.center-container {
   text-align: center;
-  margin: 20px;
+  margin-top: 80px; /* Adds space below the fixed header */
 }
 
-.content h1 {
+.center-container h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.content p {
+.center-container p {
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-/* Button Styles */
+/* Buttons */
 .buttons {
   display: flex;
   justify-content: center;
@@ -68,7 +76,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  .content h1 {
+  .center-container h1 {
     font-size: 20px;
   }
 
