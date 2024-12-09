@@ -7,12 +7,15 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   
   <style>
-    /* Basic styling */
-    body {
-      font-family: Arial, sans-serif;
+    /* General Reset */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
     }
 
     header {
@@ -27,6 +30,7 @@
     header .menu {
       font-size: 24px;
       cursor: pointer;
+      display: none; /* Hidden on desktop, visible on mobile */
     }
 
     header .logo img {
@@ -34,12 +38,12 @@
     }
 
     .portfolio {
-      transform: translateY(80%);
+      transform: translateY(20px);
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
-     }
+    }
 
     .portfolio-item {
       background: #f9f9f9;
@@ -49,6 +53,7 @@
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .portfolio-image {
       position: relative;
     }
@@ -72,6 +77,59 @@
 
     button#ar-button:hover {
       background: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px;
+      }
+
+      header .menu {
+        display: block; /* Show menu on mobile */
+      }
+
+      header .logo img {
+        height: 30px; /* Smaller logo for mobile */
+      }
+
+      .portfolio {
+        grid-template-columns: 1fr; /* One column for small screens */
+        gap: 15px;
+      }
+
+      .portfolio-item {
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      model-viewer {
+        height: 250px; /* Reduce model-viewer height on smaller screens */
+      }
+
+      button#ar-button {
+        padding: 8px 12px; /* Adjust button size for mobile */
+      }
+    }
+
+    @media (min-width: 769px) {
+      /* Desktop-specific styles can be added here */
+      header .menu {
+        display: none; /* Hide menu icon on desktop */
+      }
+
+      .portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Multiple columns */
+        gap: 20px;
+      }
+
+      .portfolio-item {
+        padding: 15px;
+      }
+
+      model-viewer {
+        height: 300px;
+      }
     }
   </style>
 </head>
