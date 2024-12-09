@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Website</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  
+ 
   <style>
     /* Basic styling */
     body {
@@ -16,29 +16,27 @@
     }
 
     header {
-      display: grid;
+      display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
-      background: #fff; /* Header background set to white */
-      color: #333;
-      border-bottom: 1px solid #ddd; /* Optional: Adds a subtle border */
+      background: #333;
+      color: #fff;
     }
 
     header .menu {
       font-size: 24px;
       cursor: pointer;
-      color: #000; /* Menu button color set to black */
     }
 
     header .logo img {
       height: 40px;
     }
 
-    .portfolio {
-      display: flex;
-      transform: translateY(70%)
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Desktop default */
+     .portfolio {
+      display: grid;
+       transform: translateY(70%);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
     }
@@ -51,7 +49,6 @@
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-
     .portfolio-image {
       position: relative;
     }
@@ -75,22 +72,6 @@
 
     button#ar-button:hover {
       background: #0056b3;
-    }
-
-    /* Mobile responsiveness */
-    @media screen and (max-width: 768px) {
-      .portfolio {
-        grid-template-columns: 1fr; /* Makes portfolio vertical for smaller screens */
-      }
-
-      header {
-        flex-direction: column; /* Stack header elements vertically */
-        text-align: center;
-      }
-
-      header .menu {
-        margin-bottom: 10px;
-      }
     }
   </style>
 </head>
