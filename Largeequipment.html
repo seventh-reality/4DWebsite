@@ -36,9 +36,8 @@
     }
 
     .portfolio {
-      transform: translateY(100%);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Desktop default */
       gap: 20px;
       padding: 20px;
     }
@@ -75,6 +74,22 @@
 
     button#ar-button:hover {
       background: #0056b3;
+    }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 768px) {
+      .portfolio {
+        grid-template-columns: 1fr; /* Makes portfolio vertical for smaller screens */
+      }
+
+      header {
+        flex-direction: column; /* Stack header elements vertically */
+        text-align: center;
+      }
+
+      header .menu {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
