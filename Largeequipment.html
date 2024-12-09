@@ -34,27 +34,25 @@
     }
 
     .portfolio {
-  display: flex;
-  flex-wrap: wrap; /* Ensures items wrap to the next row if they exceed the container's width */
-  gap: 20px;
-  padding: 20px;
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
 
     .portfolio-item {
-  flex: 1 1 calc(33.33% - 20px); /* Adjust the basis percentage for desired width */
-  max-width: calc(33.33% - 20px); /* Ensure items don't exceed the row's width */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 100%; /* Ensures items stretch to match row height */
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100%; /* Ensures items stretch to match grid height */
+    }
     .portfolio-image {
       position: relative;
     }
