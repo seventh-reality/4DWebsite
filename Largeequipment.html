@@ -5,22 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Website</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
- 
   <style>
-    /* Basic styling */
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset and Basic Styling */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      background: #333;
+      padding: 15px 20px;
+      background-color: #333;
       color: #fff;
     }
 
@@ -33,8 +36,9 @@
       height: 40px;
     }
 
-     .portfolio {
-      transform: translateY(120px);
+    /* Portfolio Section */
+    .portfolio {
+      transform: translateY(60px); /* Adds spacing between the header and content */
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
@@ -48,7 +52,14 @@
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
     .portfolio-image {
       position: relative;
     }
@@ -73,6 +84,22 @@
     button#ar-button:hover {
       background: #0056b3;
     }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header .logo {
+        margin-bottom: 10px;
+      }
+
+      .portfolio {
+        grid-template-columns: 1fr; /* Single column for mobile */
+      }
+    }
   </style>
 </head>
 <body>
@@ -85,25 +112,46 @@
 </header>
 
 <div class="portfolio">
+  <!-- Portfolio Item 1 -->
   <article class="portfolio-item">
     <div class="portfolio-image">
-      <model-viewer src="scc.glb" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/69eacc1060b111ed8cefbd5ee26890cbbloodana.usdz">
+      <model-viewer 
+        src="scc.glb" 
+        alt="VR Headset" 
+        auto-rotate 
+        camera-controls 
+        ar 
+        ios-src="assets/69eacc1060b111ed8cefbd5ee26890cbbloodana.usdz">
         <button slot="ar-button" id="ar-button">View in 4D</button>
       </model-viewer>
     </div>
   </article>
 
+  <!-- Portfolio Item 2 -->
   <article class="portfolio-item">
     <div class="portfolio-image">
-      <model-viewer src="sem.glb" alt="AR SCANNER" auto-rotate camera-controls ar ios-src="assets/CT SCANNER_A.usdz">
+      <model-viewer 
+        src="sem.glb" 
+        alt="AR SCANNER" 
+        auto-rotate 
+        camera-controls 
+        ar 
+        ios-src="assets/CT_SCANNER_A.usdz">
         <button slot="ar-button" id="ar-button">View in 4D</button>
       </model-viewer>
     </div>
   </article>
 
+  <!-- Portfolio Item 3 -->
   <article class="portfolio-item">
     <div class="portfolio-image">
-      <model-viewer src="scc.glb" alt="AR SCANNER" auto-rotate camera-controls ar ios-src="assets/229a4014603111ed8cefbd5ee26890cbCarm.usdz">
+      <model-viewer 
+        src="scc.glb" 
+        alt="AR SCANNER" 
+        auto-rotate 
+        camera-controls 
+        ar 
+        ios-src="assets/229a4014603111ed8cefbd5ee26890cbCarm.usdz">
         <button slot="ar-button" id="ar-button">View in 4D</button>
       </model-viewer>
     </div>
