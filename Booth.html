@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+ 
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+    }
+
+    header .menu {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    header .logo img {
+      height: 40px;
+    }
+    .center-container {
+  text-align: center;
+  margin-top: 100px; /* Adds space below the fixed header */
+}
+
+.center-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+     .portfolio {
+      display: grid;
+       transform: translateY(30%);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .portfolio-item {
+      background: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .portfolio-image {
+      position: relative;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button#ar-button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button#ar-button:hover {
+      background: #0056b3;
+    }
+    @media (max-width: 768px) {
+      .portfolio {
+       transform: translateY(10%);
+  
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="menu">☰</div>
+  <div class="logo">
+    <img src="logo-dark.png" alt="Logo">
+  </div>
+</header>
+<main class="content">
+  <div class="center-container">
+    <h1>LARGE EQUIPMENT</h1>
+  </div>
+</main>
+<div class="portfolio">
+  <article class="portfolio-item">
+    <div class="portfolio-image">
+      <model-viewer src="Steeradtext.glb" alt="VR Headset" auto-rotate camera-controls ar>
+        <button slot="ar-button" id="ar-button">View in 4D</button>
+      </model-viewer>
+    </div>
+  </article>
+
+  <article class="portfolio-item">
+    <div class="portfolio-image">
+      <model-viewer src="sem.glb" alt="AR SCANNER" auto-rotate camera-controls ar ios-src="assets/CT SCANNER_A.usdz">
+        <button slot="ar-button" id="ar-button">View in 4D</button>
+      </model-viewer>
+    </div>
+  </article>
+
+  <article class="portfolio-item">
+    <div class="portfolio-image">
+      <model-viewer src="Bed.glb" alt="AR SCANNER" auto-rotate camera-controls ar>
+        <button slot="ar-button" id="ar-button">View in 4D</button>
+      </model-viewer>
+    </div>
+  </article>
+</div>
+
+<script>
+  // Additional JS logic (if needed) can go here
+</script>
+
+</body>
+</html>
