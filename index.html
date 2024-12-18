@@ -48,11 +48,33 @@
       margin-top: -100px;
       display: row;
     }
+    .center-container1 {
+      text-align: center;
+      margin-top: -100px;
+      display: row;
+    }
+    .center-container2 {
+      text-align: center;
+      margin-top: -100px;
+      display: row;
+    }
 
     
 
     /* Buttons */
     .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap; /* Ensures buttons stay in a single row */
+    }
+    .buttons1 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap; /* Ensures buttons stay in a single row */
+    }
+    .buttons2 {
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -103,6 +125,24 @@
 
 <main class="content">
   <div class="center-container">
+    <div class="buttons">
+      <button onclick="navigateTo('Largeequipment.html')">LARGE EQUIPMENT</button>
+      <button onclick="navigateTo('SmallDevices.html')">SMALL DEVICES</button>
+      <button onclick="navigateTo('everything-else.html')">EVERYTHING ELSE</button>
+    </div>
+  </div>
+</main>
+  <main class="content1">
+  <div class="center-container1">
+    <div class="buttons">
+      <button onclick="navigateTo('Largeequipment.html')">LARGE EQUIPMENT</button>
+      <button onclick="navigateTo('SmallDevices.html')">SMALL DEVICES</button>
+      <button onclick="navigateTo('everything-else.html')">EVERYTHING ELSE</button>
+    </div>
+  </div>
+</main>
+  <main class="content2">
+  <div class="center-container2">
     <div class="buttons">
       <button onclick="navigateTo('Largeequipment.html')">LARGE EQUIPMENT</button>
       <button onclick="navigateTo('SmallDevices.html')">SMALL DEVICES</button>
