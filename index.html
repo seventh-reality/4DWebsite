@@ -47,15 +47,18 @@
       flex-direction: column;
       text-align: center;
       margin-top: -100px;
-      display: row;
+      display: flex;
     }
+
     /* Buttons */
     .buttons {
       display: flex;
+      flex-direction: column; /* Stack buttons vertically */
       justify-content: center;
-      gap: 20px;
-      flex-wrap: nowrap; /* Ensures buttons stay in a single row */
+      gap: 20px; /* Add spacing between buttons */
+      align-items: center; /* Center buttons horizontally */
     }
+
     .buttons button {
       padding: 10px 20px;
       font-size: 16px;
@@ -73,13 +76,12 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
     }
+
     @media (max-width: 768px) {
       .center-container h1 {
         font-size: 20px;
       }
-      .buttons {
-        flex-wrap: wrap; /* Allows buttons to wrap in smaller screens */
-      }
+
       .buttons button {
         width: 100%;
         max-width: 200px;
