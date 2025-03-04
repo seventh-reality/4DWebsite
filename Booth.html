@@ -9,18 +9,18 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    /* Embed Jost-Regular.ttf font */
+ <style>
+    /* Add Jost-Regular font */
     @font-face {
-      font-family: 'Jost';
+      font-family: 'Jost-Regular';
       src: url('Jost-Regular.ttf') format('truetype');
-      font-weight: 400;
+      font-weight: normal;
       font-style: normal;
     }
 
     /* Basic styling */
     body {
-      font-family: 'Jost', sans-serif;
+      font-family: 'Jost-Regular', 'Jost', sans-serif;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -30,19 +30,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      background: #333;
+      padding: 0px 0px;
+      background: #000000;
       color: #fff;
-      font-family: 'Jost', sans-serif;
+      font-family: 'Jost-Regular', sans-serif;
     }
 
     header .menu {
       font-size: 24px;
       cursor: pointer;
+      margin-left: 20px;
     }
 
     header .logo img {
       height: 70px;
+      margin-right: 20px;
+      margin-top: 2vh;
     }
 
     .center-container {
@@ -53,12 +56,12 @@
     .center-container h1 {
       font-size: 24px;
       margin-bottom: 10px;
-      font-family: 'Jost', sans-serif;
+      font-family: 'Jost-Regular', sans-serif;
     }
 
     .portfolio {
       display: grid;
-      transform: translateY(15%);
+      transform: translateY(10%);
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
       padding: 20px;
@@ -71,7 +74,6 @@
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-family: 'Jost', sans-serif;
     }
 
     .portfolio-image {
@@ -99,7 +101,7 @@
       cursor: pointer;
       font-size: 14px;
       line-height: 1.5;
-      font-family: 'Jost', sans-serif;
+      font-family: 'Jost-Regular', sans-serif;
       font-weight: 600;
       white-space: nowrap;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -144,6 +146,8 @@
       }
        header .logo img {
       height: 40px;
+      margin-right: 20px;
+      margin-top: 2vh;   
     }
     }
   </style>
